@@ -1,56 +1,35 @@
-# Cypress - Testes E2E
+# QA E-commerce Testing
 
-Projeto de automacao de testes end-to-end com Cypress, criado para demonstrar habilidades praticas em:
+Projeto de testes de qualidade para um e-commerce, reunindo planejamento, testes manuais, automacao E2E, API, banco de dados e evidencias.
 
-- planejamento de cenarios de teste
-- validacao de fluxos criticos de e-commerce
-- organizacao de suites por funcionalidade
-- escrita de testes legiveis e reutilizaveis
+## Estrutura
 
-## Objetivo
+- `docs/`: plano, estrategia e relatorio final
+- `manual-tests/`: casos, cenarios e checklist de regressao
+- `bug-reports/`: registros de defeitos encontrados
+- `evidencias/`: evidencias organizadas por bugs e testes
+- `api-tests/`: colecao e orientacoes para testes de API
+- `database/`: scripts e orientacoes de validacao de dados
+- `automation/cypress/`: testes E2E, fixtures e comandos Cypress
 
-Este repositorio foi estruturado como portfolio tecnico para mostrar minha evolucao em QA e automacao de testes web.
+## Automacao Cypress
 
-## Tecnologias
+Os testes existentes foram mantidos e adaptados para a nova pasta:
 
-- Cypress
-- JavaScript
-- Node.js
+- `automation/cypress/e2e/login.cy.js`: autenticacao com credenciais validas e invalidas
+- `automation/cypress/e2e/about.cy.js`: acesso a pagina institucional
+- `automation/cypress/e2e/carrinho.cy.js`: adicao e remocao de produto
+- `automation/cypress/e2e/PaginaCompras.cy.js`: checkout completo
+- `automation/cypress/e2e/spec.cy.js`: teste de referencia do Cypress
+- `automation/cypress/support/`: comandos e configuracao global
+- `automation/cypress/fixtures/`: dados de apoio
 
-## Estrutura do Projeto
+## Como executar
 
-- cypress/e2e/login.cy.js: cenarios de autenticacao
-- cypress/e2e/about.cy.js: validacoes de pagina institucional
-- cypress/e2e/carrinho.cy.js: fluxo de carrinho de compras
-- cypress/e2e/PaginaCompras.cy.js: fluxo de compras
-- cypress/e2e/spec.cy.js: testes gerais
-- cypress/support/: comandos e configuracoes de suporte
-- cypress/fixtures/: dados de apoio
+1. Instale as dependencias: `npm install`
+2. Abra o Cypress: `npm run test:open`
+3. Execute em modo headless: `npm test`
 
-## Como Executar
+## Aplicacao sob teste
 
-1. Instale as dependencias:
-   npm install
-
-2. Rode os testes no modo interativo:
-   npx cypress open
-
-3. Rode os testes no modo headless:
-   npx cypress run
-
-## Diferenciais deste Portfolio
-
-- Casos de teste focados em jornada real de usuario
-- Estrutura simples para manutencao e escalabilidade
-- Base pronta para evoluir com CI/CD (GitHub Actions)
-
-## Proximos Passos
-
-- Adicionar relatorios (Mochawesome ou Allure)
-- Integrar execucao automatica no GitHub Actions
-- Separar massa de teste por ambiente
-- Aplicar padrao Page Objects
-
-## Autor
-
-Desenvolvido por Gabriel Narcelio para fins de estudo e portfolio profissional em testes automatizados.
+Os cenarios automatizados usam o ambiente publico Sauce Demo: `https://www.saucedemo.com/`.
